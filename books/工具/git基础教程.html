@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git 基础教程 | 小辉儿</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/img/icon.ico">
+    <link rel="stylesheet" href="/blog/css/style.css">
+    <script language="javascript" type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/blog/js/MouseClickEffect.js"></script>
+    <script src="/blog/js/index.js"></script>
+    <script>var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a231f584371cf944991a315af0111c23";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();</script>
+    <script language="javascript" type="text/javascript" async="true" src="https://www.googletagmanager.com/gtag/js?id=G-C211XFBDL1">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C211XFBDL1');</script>
+    <meta name="description" content="春夏秋冬，萬事勝意">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.890c1ed5.css" as="style"><link rel="preload" href="/blog/assets/js/app.76af623e.js" as="script"><link rel="preload" href="/blog/assets/js/5.92edf6ae.js" as="script"><link rel="preload" href="/blog/assets/js/1.38b195b2.js" as="script"><link rel="preload" href="/blog/assets/js/13.6cd6bba1.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.4b4e589e.js"><link rel="prefetch" href="/blog/assets/js/11.34dba913.js"><link rel="prefetch" href="/blog/assets/js/12.07e80048.js"><link rel="prefetch" href="/blog/assets/js/14.9da1508e.js"><link rel="prefetch" href="/blog/assets/js/15.7f9add0e.js"><link rel="prefetch" href="/blog/assets/js/16.d48deed2.js"><link rel="prefetch" href="/blog/assets/js/17.36fd54fe.js"><link rel="prefetch" href="/blog/assets/js/18.97e07506.js"><link rel="prefetch" href="/blog/assets/js/19.a292059c.js"><link rel="prefetch" href="/blog/assets/js/2.f56431b6.js"><link rel="prefetch" href="/blog/assets/js/20.b54ae9ca.js"><link rel="prefetch" href="/blog/assets/js/21.a843c2e4.js"><link rel="prefetch" href="/blog/assets/js/22.f5c37fbd.js"><link rel="prefetch" href="/blog/assets/js/23.50cceba1.js"><link rel="prefetch" href="/blog/assets/js/24.61814cba.js"><link rel="prefetch" href="/blog/assets/js/25.e220121e.js"><link rel="prefetch" href="/blog/assets/js/26.654d8a06.js"><link rel="prefetch" href="/blog/assets/js/27.d87b73ec.js"><link rel="prefetch" href="/blog/assets/js/4.12035a31.js"><link rel="prefetch" href="/blog/assets/js/6.62850de2.js"><link rel="prefetch" href="/blog/assets/js/7.51e3de72.js"><link rel="prefetch" href="/blog/assets/js/8.c6ae5443.js"><link rel="prefetch" href="/blog/assets/js/9.3738bdba.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.890c1ed5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-9a2bb82e><div data-v-9a2bb82e><div class="password-shadow password-wrapper-out" style="display:none;" data-v-dec3c71a data-v-9a2bb82e data-v-9a2bb82e><h3 class="title" data-v-dec3c71a data-v-dec3c71a>小辉儿</h3> <p class="description" data-v-dec3c71a data-v-dec3c71a>春夏秋冬，萬事勝意</p> <label id="box" class="inputBox" data-v-dec3c71a data-v-dec3c71a><input type="password" value="" data-v-dec3c71a> <span data-v-dec3c71a>Konck! Knock!</span> <button data-v-dec3c71a>OK</button></label> <div class="footer" data-v-dec3c71a data-v-dec3c71a><span data-v-dec3c71a><i class="iconfont reco-theme" data-v-dec3c71a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-dec3c71a>vuePress-theme-reco</a></span> <span data-v-dec3c71a><i class="iconfont reco-copyright" data-v-dec3c71a></i> <a data-v-dec3c71a><span data-v-dec3c71a>小辉儿</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div class="hide" data-v-9a2bb82e><header class="navbar" data-v-9a2bb82e><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.jpg" alt="小辉儿" class="logo"> <span class="site-name">小辉儿</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-account"></i>
+      关于
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/about/me.html" class="nav-link"><i class="iconfont reco-account"></i>
+  关于我
+</a></li><li class="dropdown-item"><!----> <a href="/blog/about/blog.html" class="nav-link"><i class="iconfont reco-blog"></i>
+  关于博客
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-9a2bb82e></div> <aside class="sidebar" data-v-9a2bb82e><div class="personal-info-wrapper" data-v-a7f5f470 data-v-9a2bb82e><img src="/blog/img/avatar.jpg" alt="author-avatar" class="personal-img" data-v-a7f5f470> <h3 class="name" data-v-a7f5f470>
+    小辉儿
+  </h3> <div class="num" data-v-a7f5f470><div data-v-a7f5f470><h3 data-v-a7f5f470>8</h3> <h6 data-v-a7f5f470>文章</h6></div> <div data-v-a7f5f470><h3 data-v-a7f5f470>6</h3> <h6 data-v-a7f5f470>标签</h6></div></div> <ul class="social-links" data-v-a7f5f470><li class="social-item" data-v-a7f5f470><i class="iconfont reco-github" style="color:#24292f;" data-v-a7f5f470></i></li><li class="social-item" data-v-a7f5f470><i class="iconfont reco-csdn" style="color:#fc5531;" data-v-a7f5f470></i></li></ul> <hr data-v-a7f5f470></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-account"></i>
+      关于
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/about/me.html" class="nav-link"><i class="iconfont reco-account"></i>
+  关于我
+</a></li><li class="dropdown-item"><!----> <a href="/blog/about/blog.html" class="nav-link"><i class="iconfont reco-blog"></i>
+  关于博客
+</a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>工具</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/books/工具/git基础教程.html" class="active sidebar-link">git 基础教程</a></li><li><a href="/blog/books/工具/yaml介绍.html" class="sidebar-link">yaml 介绍</a></li><li><a href="/blog/books/工具/正则表达式.html" class="sidebar-link">正则表达式</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-dec3c71a data-v-9a2bb82e><h3 class="title" data-v-dec3c71a data-v-dec3c71a>git 基础教程</h3> <!----> <label id="box" class="inputBox" data-v-dec3c71a data-v-dec3c71a><input type="password" value="" data-v-dec3c71a> <span data-v-dec3c71a>Konck! Knock!</span> <button data-v-dec3c71a>OK</button></label> <div class="footer" data-v-dec3c71a data-v-dec3c71a><span data-v-dec3c71a><i class="iconfont reco-theme" data-v-dec3c71a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-dec3c71a>vuePress-theme-reco</a></span> <span data-v-dec3c71a><i class="iconfont reco-copyright" data-v-dec3c71a></i> <a data-v-dec3c71a><span data-v-dec3c71a>小辉儿</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div data-v-9a2bb82e><main class="page"><section><div class="page-title"><h1 class="title">git 基础教程</h1> <div data-v-0eb969a1><i class="iconfont reco-account" data-v-0eb969a1><span data-v-0eb969a1>小辉儿</span></i> <i class="iconfont reco-date" data-v-0eb969a1><span data-v-0eb969a1>2022/4/11</span></i> <!----> <i class="tags iconfont reco-tag" data-v-0eb969a1><span class="tag-item" data-v-0eb969a1>git</span></i></div></div> <div class="theme-reco-content content__default"><blockquote><p>参考链接：</p> <ul><li><a href="https://www.bilibili.com/video/BV1db4y1d79C" target="_blank" rel="noopener noreferrer">哔哩哔哩视频教程<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://juejin.cn/post/6974184935804534815" target="_blank" rel="noopener noreferrer">掘金<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></blockquote> <h2 id="git-的工作区域和流程"><a href="#git-的工作区域和流程" class="header-anchor">#</a> Git 的工作区域和流程</h2> <p>Git 的三个概念：</p> <ul><li>提交 commit</li> <li>仓库 repository</li> <li>分支 branch</li></ul> <p>git 的核心功能就是把代码的变化以提交 commit 为单位记录下来。</p> <p>修改文件之后进行保存，这时的文件在工作区，通过 <code>git add</code> 之后文件进入暂存区，<code>git commit</code> 之后文件才会进入仓库。</p> <p>git 管理的是修改（即暂存区），而不是文件。如 <code>第一次提交 → git add → 第二次修改 → git commit</code> ，那么第二次的修改并不会提交到仓库。</p> <p><img src="/blog/assets/img/image-20210819210538-4jandcp.c6d9cc38.png" alt=""></p> <ul><li>Workspace：工作区，就是平时进行开发改动的地方，是当前看到最新的内容，在开发的过程也就是对工作区的操作</li> <li>Index/Stage：暂存区，当执行 <code>git add</code> 的命令后，工作区的文件就会被移入暂存区，暂存区标记了当前工作区中哪些内容是被 Git 管理的，当完成某个需求或者功能后需要提交代码，第一步就是通过 <code>git add</code> 先提交到暂存区。</li> <li>Repository：本地仓库，位于自己的电脑上，通过 <code>git commit</code> 提交暂存区的内容，会进入本地仓库。</li> <li>Remote：远程仓库，用来托管代码的服务器，远程仓库的内容能够被分布在多个地点的处于协作关系的本地仓库修改，本地仓库修改完代码后通过 <code>git push</code> 命令同步代码到远程仓库。</li></ul> <p>一般来说，Git 的工作流程分为以下几步</p> <ol><li>在<strong>工作区</strong>开发，添加，修改文件。</li> <li>将修改后的文件放入<strong>暂存区</strong>。</li> <li>将暂存区域的文件提交到<strong>本地仓库</strong>。</li> <li>将本地仓库的修改推送到<strong>远程仓库</strong>。</li></ol> <ul><li>Git 管理的文件有三种状态：
+<ul><li>已修改（modified）【在工作区修改了文件】</li> <li>已暂存（staged）【<code>git add</code>之后】</li> <li>已提交（committed）【<code>git commit</code>之后】</li></ul></li></ul> <h2 id="常见问题"><a href="#常见问题" class="header-anchor">#</a> 常见问题</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">git</span> clone <span class="token operator">&lt;</span>别人的仓库地址<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>自定义本地仓库的名字<span class="token operator">&gt;</span>
+<span class="token function">git</span> init   <span class="token comment"># 初始化仓库</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><strong><code>git clone</code> 与 <code>download zip</code> 都是下载，有何不同？</strong></p> <p><code>git clone</code> 下载的是一个完整的仓库，是带有 <code>.git</code> 文件夹的，也就是说会有完整的代码提交历史。
+而 <code>download zip</code> 则是下载的文件夹，不是一个仓库。</p> <p><strong>commit 中的修改状态：</strong> 红色表示删除的，绿色表示增加的，白色表示以前的。</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">git</span> <span class="token function">add</span> -A
+<span class="token function">git</span> commit -m <span class="token string">&quot;提交信息&quot;</span>
+<span class="token function">git</span> log --stat   查看提交的日志
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>编辑器中文件树颜色状态：</strong>（VSCode）</p> <p>绿色表示未提交至仓库；</p> <p>编辑器分支管理按钮下<strong>更改</strong>下面的内容：会和 git 仓库已有的东西进行比较，把本次的变化进行标注。</p> <ul><li><code>U</code> 表示完全新增的文件</li> <li><code>M</code> 表示修改过该文件</li></ul> <p><code>git add</code> 之后会有<strong>暂存的更改</strong>按钮；</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 下面的这些操作在vscode中都有相应的按钮</span>
+
+<span class="token comment"># 工作区的文件打回【还没有 git add】</span>
+<span class="token comment"># 未 git add 时通过下面的命令可以回滚到上次commit或者add之后的状态</span>
+<span class="token comment"># 也就是把上次（暂存区或者仓库）的内容转移到工作区</span>
+<span class="token comment"># 通过vscode中的 放弃更改 按钮也可以实现</span>
+<span class="token function">git</span> checkout <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>
+
+
+<span class="token comment"># 提交后撤回（提交commit之后就到仓库了）</span>
+<span class="token function">git</span> reset HEAD^
+<span class="token comment"># HEAD表示当前最新的的提交</span>
+<span class="token comment"># reset表示把当前最新的提交定向到某一个，那么定向到哪一个呢</span>
+<span class="token comment"># HEAD^1表示上一个</span>
+<span class="token comment"># HEAD^2表示上两个</span>
+<span class="token comment"># 做完reset之后文件就会重新回到工作区，这个时候再使用上面的checkout就可以恢复到上一次提交commit之后的状态了</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h2 id="常见命令"><a href="#常见命令" class="header-anchor">#</a> 常见命令</h2> <h3 id="添加与提交"><a href="#添加与提交" class="header-anchor">#</a> 添加与提交</h3> <p><code>git add</code>添加文件到暂存区</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 添加某个文件到暂存区，后面可以跟多个文件，以空格区分</span>
+<span class="token function">git</span> <span class="token function">add</span> xxx
+<span class="token comment"># 添加当前更改的所有文件到暂存区。</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><code>git commit</code>提交到本地仓库</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 提交暂存的更改，会新开编辑器进行编辑</span>
+<span class="token function">git</span> commit 
+
+<span class="token comment"># 提交暂存的更改，并记录下备注</span>
+<span class="token function">git</span> commit -m <span class="token string">&quot;your message&quot;</span>
+
+<span class="token comment"># 等同于 git add . &amp;&amp; git commit -m</span>
+<span class="token function">git</span> commit -am
+
+<span class="token comment"># 对最近一次的提交的信息进行修改,此操作会修改commit的hash值</span>
+<span class="token function">git</span> commit --amend
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="分支管理"><a href="#分支管理" class="header-anchor">#</a> 分支管理</h3> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 新建本地分支，但不切换</span>
+<span class="token function">git</span> branch <span class="token operator">&lt;</span>branch-name<span class="token operator">&gt;</span> 
+
+<span class="token comment"># 从当前节点新建分支</span>
+<span class="token function">git</span> checkout -b <span class="token operator">&lt;</span>branch-name<span class="token operator">&gt;</span>
+
+<span class="token comment"># 列举所有的本地分支</span>
+<span class="token function">git</span> branch
+
+<span class="token comment"># 查看远程分支</span>
+<span class="token function">git</span> branch -r
+
+<span class="token comment"># 查看本地和远程分支</span>
+<span class="token function">git</span> branch -a
+
+<span class="token comment"># 单纯地切换到某个分支</span>
+<span class="token function">git</span> checkout <span class="token operator">&lt;</span>branch-name<span class="token operator">&gt;</span>
+
+<span class="token comment"># 删除特定的本地分支</span>
+<span class="token function">git</span> branch -D <span class="token operator">&lt;</span>branch-name<span class="token operator">&gt;</span>
+
+<span class="token comment"># 重新命名分支</span>
+<span class="token function">git</span> branch -m <span class="token operator">&lt;</span>old-branch-name<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>new-branch-name<span class="token operator">&gt;</span>
+
+<span class="token comment"># 合并分支（在当前分支下把别的分支拉过来合并到当前分支）</span>
+<span class="token function">git</span> merge <span class="token operator">&lt;</span>branch-name<span class="token operator">&gt;</span>
+
+<span class="token comment"># 当合并产生冲突时，可以暂时放弃合并冲突，以后再处理</span>
+<span class="token function">git</span> merge --abort
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><h3 id="远程仓库"><a href="#远程仓库" class="header-anchor">#</a> 远程仓库</h3> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 下载远程仓库到本地</span>
+<span class="token function">git</span> clone <span class="token operator">&lt;</span>网上的仓库地址<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>自定义本地仓库的名字<span class="token operator">&gt;</span>
+
+<span class="token comment"># 推送当前分支最新的提交到远程</span>
+<span class="token function">git</span> push
+
+<span class="token comment"># 拉取远程分支最新的提交到本地</span>
+<span class="token function">git</span> pull
+
+<span class="token comment"># 从远程仓库拉取代码并合并到本地，可简写为 git pull 等同于 git fetch &amp;&amp; git merge </span>
+<span class="token function">git</span> pull <span class="token operator">&lt;</span>远程主机名<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>远程分支名<span class="token operator">&gt;</span>:<span class="token operator">&lt;</span>本地分支名<span class="token operator">&gt;</span>
+
+<span class="token comment"># 使用rebase的模式进行合并</span>
+<span class="token function">git</span> pull --rebase <span class="token operator">&lt;</span>远程主机名<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>远程分支名<span class="token operator">&gt;</span>:<span class="token operator">&lt;</span>本地分支名<span class="token operator">&gt;</span>
+
+<span class="token comment"># 查看远程仓库信息</span>
+<span class="token function">git</span> remote -v
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>与 <code>git pull</code> 不同的是 <code>git fetch</code> 操作仅仅只会拉取远程的更改，不会自动进行 merge 操作。对你当前的代码没有影响。</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 获取远程仓库特定分支的更新</span>
+<span class="token function">git</span> fetch <span class="token operator">&lt;</span>远程主机名<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>分支名<span class="token operator">&gt;</span>
+
+<span class="token comment"># 获取远程仓库所有分支的更新</span>
+<span class="token function">git</span> fetch --all
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间: </span> <span class="time">2022/4/13 下午4:58:00</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/blog/books/工具/yaml介绍.html">
+            yaml 介绍
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-73918d74><li class="level-2" data-v-73918d74><a href="/blog/books/%E5%B7%A5%E5%85%B7/git%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B.html#git-的工作区域和流程" class="sidebar-link reco-side-git-的工作区域和流程" data-v-73918d74>Git 的工作区域和流程</a></li><li class="level-2" data-v-73918d74><a href="/blog/books/%E5%B7%A5%E5%85%B7/git%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B.html#常见问题" class="sidebar-link reco-side-常见问题" data-v-73918d74>常见问题</a></li><li class="level-2" data-v-73918d74><a href="/blog/books/%E5%B7%A5%E5%85%B7/git%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B.html#常见命令" class="sidebar-link reco-side-常见命令" data-v-73918d74>常见命令</a></li><li class="level-3" data-v-73918d74><a href="/blog/books/%E5%B7%A5%E5%85%B7/git%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B.html#添加与提交" class="sidebar-link reco-side-添加与提交" data-v-73918d74>添加与提交</a></li><li class="level-3" data-v-73918d74><a href="/blog/books/%E5%B7%A5%E5%85%B7/git%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B.html#分支管理" class="sidebar-link reco-side-分支管理" data-v-73918d74>分支管理</a></li><li class="level-3" data-v-73918d74><a href="/blog/books/%E5%B7%A5%E5%85%B7/git%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B.html#远程仓库" class="sidebar-link reco-side-远程仓库" data-v-73918d74>远程仓库</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a008c6ba data-v-a008c6ba><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a008c6ba><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a008c6ba></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a008c6ba></path></svg></div><div></div><!----><div></div></div></div>
+    <script src="/blog/assets/js/app.76af623e.js" defer></script><script src="/blog/assets/js/5.92edf6ae.js" defer></script><script src="/blog/assets/js/1.38b195b2.js" defer></script><script src="/blog/assets/js/13.6cd6bba1.js" defer></script>
+  </body>
+</html>
